@@ -4,7 +4,7 @@
 
 int main() {
 
-	const char* app_name = "brave.exe";
+	const char* app_name = "brave.exe", *module_name = "brave.exe";
 
 	extern_memory manager(app_name);
 
@@ -16,7 +16,7 @@ int main() {
 
 	std::cout << "attached to \"" << app_name << "\" successfully, MZ test: \"";
 
-	auto mz_text = manager(app_name, 0, (short)0);
+	auto mz_text = manager(module_name, 0, (short)0);
 
 	std::cout << ((char*)(&mz_text))[0] << ((char*)(&mz_text))[1] << "\"" << std::endl;
 
