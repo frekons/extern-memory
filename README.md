@@ -1,7 +1,7 @@
 # extern_memory
 using WINAPIs to interact with other processes's memories
 
-```
+```C
 	const char* app_name = "brave.exe", *module_name = "brave.exe";
 
 	extern_memory memory(app_name);
